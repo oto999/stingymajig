@@ -1,0 +1,33 @@
+{%extends "Main.html" %}
+
+{% block Cash%}
+
+      {% if session["username"] != None%}
+        <P align=right style="font-size: 30px">cash: {{session["cash"]}} </P>
+        <P align=right style="font-size: 30px">items: {{session["items"]}}</P>
+      {% else %}
+        <P align=right style="font-size: 30px">cash: 0 </P>
+        <P align=right style="font-size: 30px">items: 0</P>
+      {% endif %}
+
+{% endblock %}
+
+{% block mainContent%}
+
+<div class = "row">
+{% for row in random_stuff %}
+
+<div class="card" style="width: 18rem;">
+<img src="https://static.thenounproject.com/png/66052-200.png" class="card-img-top" alt="...">
+<div class="card-body">
+    <h5 class="card-title">{{row[0]}}</h5>
+    <p class="card-text">{{row[2]}}</p>
+    <a  href="{{url_for('Buy')}}" class="btn btn-primary">GEL {{row[1]}}</a>
+</div>
+</div>
+{% endfor %}
+</div>
+
+{% endblock %}
+
+

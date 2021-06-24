@@ -1,0 +1,12 @@
+.body{
+    background-image: url(istockphoto-1271102135-612x612.jpg);
+}
+
+.navbar navbar-expand-lg navbar-light bg-light{
+    background-color: blueviolet;
+}
+
+.card{
+    padding: 5px;
+}
+
